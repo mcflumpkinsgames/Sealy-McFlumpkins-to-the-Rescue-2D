@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://yx1bpf7ixeke"]
+
+[ext_resource type="Texture2D" uid="uid://dwn8j8xilrrni" path="res://assets/water.png" id="1_gemfb"]
+[ext_resource type="PackedScene" uid="uid://dyv3jcdgvi8l3" path="res://scenes/player.tscn" id="2_0yu24"]
+[ext_resource type="PackedScene" uid="uid://nxm4j1oicji7" path="res://scenes/enemy_spawner.tscn" id="4_n5r7u"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1316.0
+offset_bottom = 753.0
+texture = ExtResource("1_gemfb")
+stretch_mode = 1
+
+[node name="Player" parent="." instance=ExtResource("2_0yu24")]
+position = Vector2(54, 355)
+
+[node name="EnemySpawner" parent="." instance=ExtResource("4_n5r7u")]

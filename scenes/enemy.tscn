@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://w3x5wihrfrj6"]
+
+[ext_resource type="Script" path="res://scenes/enemy.gd" id="1_1k332"]
+[ext_resource type="Texture2D" uid="uid://bqhye70puf55w" path="res://assets/orca.png" id="1_l1ntk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iw23w"]
+radius = 70.05
+
+[node name="Enemy" type="Area2D"]
+script = ExtResource("1_1k332")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("1_l1ntk")
+
+[node name="VisibleNotifier" type="VisibleOnScreenNotifier2D" parent="."]
+rotation = -0.837758
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 5.44543
+shape = SubResource("CircleShape2D_iw23w")
