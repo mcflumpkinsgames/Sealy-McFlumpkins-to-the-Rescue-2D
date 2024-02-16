@@ -6,6 +6,7 @@ var speed = 300
 var bubbles = preload("res://scenes/bubbles.tscn")
 @export var bubbles_offset = 75
 @onready var bubbles_container = $BubblesContainer
+@onready var bubbles_sound = $BubblesSound
 
 func _physics_process(delta):
 	velocity = Vector2(0, 0)
@@ -34,6 +35,7 @@ func shoot():
 	bubbles_container.add_child(bubbles_instance)
 	bubbles_instance.global_position = global_position
 	bubbles_instance.global_position.x += bubbles_offset
+	bubbles_sound.play()
 	
 func take_damage():
 	emit_signal("took_damage")
