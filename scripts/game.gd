@@ -12,7 +12,7 @@ func _ready():
 	hud.set_lives(lives)
 
 func _on_death_zone_area_entered(area):
-	area.die()
+	area.queue_free()
 
 
 func _on_player_took_damage():
@@ -21,6 +21,7 @@ func _on_player_took_damage():
 	
 	if (lives <= 0):
 		player.die()
+		await get_tree().create_timer(1.5).timeout
 		show_game_over()
 	else:
 		print("lives is now " + str(lives))

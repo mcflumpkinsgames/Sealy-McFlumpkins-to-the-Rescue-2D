@@ -12,7 +12,7 @@ corner_radius_bottom_left = 25
 
 [sub_resource type="LabelSettings" id="LabelSettings_1gb10"]
 font = ExtResource("1_aej51")
-font_size = 64
+font_size = 48
 
 [sub_resource type="LabelSettings" id="LabelSettings_iatfx"]
 font = ExtResource("1_aej51")
@@ -56,7 +56,7 @@ offset_right = 206.0
 offset_bottom = -68.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "GAME OVER"
+text = "womp womp, you died"
 label_settings = SubResource("LabelSettings_1gb10")
 
 [node name="Score" type="Label" parent="Panel"]
