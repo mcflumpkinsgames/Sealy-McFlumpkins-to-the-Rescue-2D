@@ -45,3 +45,8 @@ func show_game_over():
 	var game_over_screen_instance = game_over_screen.instantiate()
 	game_over_screen_instance.set_score(score)
 	hud.add_child(game_over_screen_instance)
+	
+
+func _on_enemy_spawner_path_enemy_spawned(path_enemy_instance):
+	add_child(path_enemy_instance)
+	path_enemy_instance.enemy.connect("died", _on_enemy_died)
